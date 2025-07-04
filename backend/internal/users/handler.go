@@ -106,7 +106,9 @@ func (h *UserHandler) GetProfileDetails(ctx *gin.Context) {
 	ctx.JSON(200, gin.H{"message": "Get User", "user": u})
 }
 
-type SearchUserPayload struct{}
+type SearchUserPayload struct{
+	Query string `json:"query" binding:"required"`
+}
 
 func (h *UserHandler) SearchUser(ctx *gin.Context) {
 	var requestBody SearchUserPayload
@@ -115,5 +117,11 @@ func (h *UserHandler) SearchUser(ctx *gin.Context) {
 		return
 	}
 
-	ctx.JSON(http.StatusOK, gin.H{"message": "User search successful"})
+	users, err := h.logicManager.getSearchUsers(requestBody.Query)
+	if err != nil {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+		return
+	}
+
+	ctx.JSON(http.StatusOK, gin.H{"message": "User search successful", "users": users})
 }

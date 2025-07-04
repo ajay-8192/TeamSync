@@ -3,11 +3,11 @@ package models
 import "time"
 
 type Users struct {
-	Id        string `json:"id" gorm:"primaryKey;unique;index"`
-	FirstName string `json:"firstName" gorm:"not null;index:idx_name,priority:1"`
-	LastName  string `json:"lastName" gorm:"not null;index:idx_name,priority:2"`
-	Email     string `json:"email" gorm:"not null;unique;index"`
-	Username  string `json:"username" gorm:"not null;unique;index"`
+	Id        string    `json:"id" gorm:"primaryKey;unique;index"`
+	FirstName string    `json:"firstName" gorm:"not null;index:idx_name,priority:1"`
+	LastName  string    `json:"lastName" gorm:"not null;index:idx_name,priority:2"`
+	Email     string    `json:"email" gorm:"not null;unique;index"`
+	Username  string    `json:"username" gorm:"not null;unique;index"`
 	CreatedAt time.Time `json:"createdAt"`
 	UpdatedAt time.Time `json:"updatedAt"`
 }

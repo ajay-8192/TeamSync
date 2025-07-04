@@ -5,6 +5,7 @@ import (
 	"errors"
 	"fmt"
 	"log"
+	"team-sync/internal/models"
 	"team-sync/internal/utils"
 	"time"
 
@@ -112,4 +113,13 @@ func (l *UserLogicManager) VerifyOTP(email, otp string) (string, error) {
 	}
 
 	return token, nil
+}
+
+func (l *UserLogicManager) getSearchUsers(query string) ([]*models.Users, error) {
+	users, err := l.query.getSearchUsers(query)
+	if err != nil {
+		return nil, err
+	}
+
+	return users, nil
 }

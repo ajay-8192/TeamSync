@@ -75,3 +75,23 @@ func (q *UserQuery) deleteDraftUser(draftUser *models.DraftUsers) error {
 
 	return nil
 }
+
+func (q *UserQuery) getSearchUsers(query string) ([]*models.Users, error) {
+	var users []*models.Users
+	prefix := query + "%"
+	substring := "%" + query + "%"	
+	if err := q.db.Raw(`
+		(
+			SELECT * FROM users WHERE username ILIKE ? ORDER BY username LIMIT 5
+		)
+		UNION ALL
+		(
+			SELECT * FROM users WHERE username ILIKE ? AND username NOT ILIKE ? ORDER BY username LIMIT 5
+		)
+		LIMIT 5
+	`, prefix, substring, prefix).Scan(&users).Error; err != nil {
+			return nil, err
+		}
+
+	return users, nil
+}
