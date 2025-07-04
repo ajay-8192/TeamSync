@@ -12,8 +12,13 @@ import ProfilePage from "./pages/AuthPages/ProfilePage";
 import { OrgProvider } from "./context/OrgContext";
 import { ChatProvider } from "./context/ChatContext";
 import CreateOrgPage from "./pages/ChatPages/CreateOrgPage";
+import HomePage from "./pages/HomePage";
 
 const routes = createBrowserRouter([
+    {
+        path: "/",
+        Component: HomePage
+    },
     {
         path: "register",
         Component: RegisterPage

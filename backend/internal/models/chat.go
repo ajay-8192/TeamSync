@@ -46,6 +46,8 @@ type ConversationMembers struct {
 	JoinedAt       time.Time `json:"joinedAt"`
 	LastVisitedAt  time.Time `json:"lastVisitedAt"`
 
+	LastReadAt 		time.Time `json:"lastReadAt"`
+
 	Conversation Conversations `json:"-" gorm:"foreignKey:ConversationId;references:ID;constraint:OnDelete:CASCADE"`
 }
 
