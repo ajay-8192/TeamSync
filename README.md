@@ -28,6 +28,10 @@ A robust, scalable, and real-time chat application designed for teams and enterp
         
     -   **Data Governance**: Implement data retention and eDiscovery policies.
         
+## Flow
+
+![TeamSync Flow Chart](./frontend/public/TeamSyncFlow.jpg)
+
 
 ## 🛠️ Tech Stack
 
