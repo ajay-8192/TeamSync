@@ -86,7 +86,7 @@ Follow these instructions to get the project up and running on your local machin
 1.  **Clone the repository:**
     
     ```
-    git clone [https://github.com/ajay-8192/TeamSync.git](https://github.com/ajay-8192/TeamSync)
+    git clone https://github.com/ajay-8192/TeamSync.git
     cd TeamSync
     
     
