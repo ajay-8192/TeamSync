@@ -86,8 +86,8 @@ Follow these instructions to get the project up and running on your local machin
 1.  **Clone the repository:**
     
     ```
-    git clone https://github.com/your-username/real-time-chat-app.git
-    cd real-time-chat-app
+    git clone [https://github.com/ajay-8192/TeamSync.git](https://github.com/ajay-8192/TeamSync)
+    cd TeamSync
     
     
     ```
@@ -95,7 +95,7 @@ Follow these instructions to get the project up and running on your local machin
 2.  **Backend Setup (Go):**
     
     ```
-    cd server
+    cd backend
     go mod tidy
     
     
@@ -115,7 +115,7 @@ Follow these instructions to get the project up and running on your local machin
 3.  **Frontend Setup (React + Vite):**
     
     ```
-    cd client
+    cd frontend
     npm install
     
     
@@ -136,7 +136,7 @@ Follow these instructions to get the project up and running on your local machin
 1.  **Start the Backend Server:**
     
     ```
-    cd server
+    cd backend
     go run main.go
     
     
@@ -147,7 +147,7 @@ Follow these instructions to get the project up and running on your local machin
 2.  **Start the Frontend Development Server:**
     
     ```
-    cd client
+    cd frontend
     npm run dev
     
     
