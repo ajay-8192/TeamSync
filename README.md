@@ -30,7 +30,7 @@ A robust, scalable, and real-time chat application designed for teams and enterp
         
 ## Flow
 
-![TeamSync Flow Chart](./frontend/public/TeamSyncFlow.jpg)
+<iframe width="768" height="432" src="https://miro.com/app/live-embed/uXjVIjfHtqA=/?embedMode=view_only_without_ui&moveToViewport=410,-475,4698,3477&embedId=132638855799" frameborder="0" scrolling="no" allow="fullscreen; clipboard-read; clipboard-write" allowfullscreen></iframe>
 
 
 ## 🛠️ Tech Stack
